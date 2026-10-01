@@ -1,0 +1,19 @@
+{
+  "name": "dirty-on-the-thirty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily entertainment briefing email for The Dirty on the Thirty (replaces the n8n workflow).",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "preview": "node src/index.js --dry-run --force",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "nodemailer": "^10.0.13",
+    "rss-parser": "^3.13.0"
+  }
+}
