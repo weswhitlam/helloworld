@@ -28,7 +28,11 @@ jobs:
       run:
         working-directory: dirty-on-the-thirty
     steps:
+      # Check out the latest main, not the commit that triggered this run, so a run that
+      # waited in the concurrency queue sees the history saved by the run before it.
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-node@v7
         with:
